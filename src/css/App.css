@@ -154,6 +154,11 @@ p {
     background: none !important;
     width: 100% !important;
   }
+  a{
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+  }
   ul li a:hover {
     background-color: #fff;
   }
