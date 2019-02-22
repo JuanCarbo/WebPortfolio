@@ -33,7 +33,7 @@ export default class App extends Component {
         sliceChildren = (
           <div>
             <p>Incididunt ad consectetur sit sint veniam aute commodo veniam tempor aute commodo velit.</p>
-            <div className="cta">HIRE ME!</div>
+            <div className="cta" onClick={()=> window.open("https://www.linkedin.com/in/juan-carb%C3%B3-62695399/", "_blank")}>HIRE ME!</div>
           </div>
         )
         break;
