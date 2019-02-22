@@ -1,9 +1,6 @@
 body, html, .App {
   font-family: 'Open Sans', sans-serif;
 }
-.transparent-Filter{
-  display: block;
-}
 .App {
   position: absolute;
   height: calc(100%);
@@ -97,6 +94,13 @@ p {
   height: 5em;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-out
+}
+
 
 @media only screen and (max-width: 768px){
   .transparent-filter.active{
@@ -146,6 +150,9 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
+  .transparent-filter{
+    display: none;
+  }
   body, .App {
     position: fixed;
     display: grid;
