@@ -17,6 +17,11 @@ export default class App extends Component {
       MenuIsExpanded: !this.state.MenuIsExpanded,
     })
   }
+
+  clickAnywhere() {
+    if (this.state.MenuIsExpanded)
+      this.handleToggleMenu(null);
+  }
   render() {
 
     var sliceImg, sliceTitle, sliceChildren;
@@ -38,7 +43,7 @@ export default class App extends Component {
         sliceChildren = (
           <div>
             <p>I have ample experience working with both front and back-end, whatever your needs are. I can solve them</p>
-            <div class="transparent-box">
+            <div className="transparent-box">
               <div>
                 My areas of expertise
               </div>
@@ -70,7 +75,7 @@ export default class App extends Component {
         sliceTitle = 'I am Juan Carbó';
         sliceChildren = (
           <div>
-            <div className>
+            <div>
               <p>
                 I am a full stack developer, currently working at Globant in a asp.net project. My hability to come up with approaches to difficult issues has made me shine through the time I have been working here.
             </p>
@@ -82,14 +87,17 @@ export default class App extends Component {
         )
     }
     let nulldiv
-    if(this.state.MenuIsExpanded)
-    {
-      nulldiv = <div className="transparent-Filter" onClick={(e)=>this.handleToggleMenu(e)}></div>
+    if (this.state.MenuIsExpanded) {
+      nulldiv = <div className="transparent-Filter" onClick={(e) => this.handleToggleMenu(e)}></div>
     }
 
 
     return (
       <div className="App">
+
+        <div className={`transparent-filter ${this.state.MenuIsExpanded ? 'active' : ''}`} onClick= {() => this.clickAnywhere()}>
+
+        </div>
         <aside>
           <figure>
             <div id="avatar"></div>

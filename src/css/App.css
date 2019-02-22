@@ -2,10 +2,7 @@ body, html, .App {
   font-family: 'Open Sans', sans-serif;
 }
 .transparent-Filter{
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 50%;
+  display: block;
 }
 .App {
   position: absolute;
@@ -99,7 +96,25 @@ p {
   margin: 1em;
   height: 5em;
 }
+
+
 @media only screen and (max-width: 768px){
+  .transparent-filter.active{
+    display: block;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3E2500;
+    opacity: 0.7;
+    transition: opacity .5s ease-out;
+  }
+  .transparent-filter{
+    display: block;
+    opacity: 0;
+    height: 100%;
+    position: fixed;
+  }
   main {
     background: #fff !important;
     padding: 1em 1.4em;
@@ -110,7 +125,7 @@ p {
     padding: 0;
     transition: transform 0.5s ease-out
   }
-  .inactive{
+  ul.inactive{
     position: fixed;
     display: block;
     background: #fff;
@@ -119,7 +134,7 @@ p {
     top: 0;
     height: 0;
   }
-  .active {
+  ul.active {
     position: absolute;
     display: block;
     background: #fff;
