@@ -30,12 +30,14 @@ export default class App extends Component {
       this.handleToggleMenu(null);
   }
   render() {
-
+    const imgMardel = require('../img/mardel.jpg');
+    const imgLaptop = require('../img/laptop.jpg');
+    const imgDesktop = require('../img/desktop.jpg');
     var sliceImg, sliceTitle, sliceChildren;
 
     switch (this.state.CurrentSlice) {
       case 0:
-        sliceImg = require('../img/laptop.jpg');
+        sliceImg = imgLaptop;
         sliceTitle = "I am Juan Carbo";
         sliceChildren = (
           <div>
@@ -45,7 +47,7 @@ export default class App extends Component {
         )
         break;
       case 1:
-        sliceImg = require('../img/mardel.jpg');
+        sliceImg = imgMardel;
         sliceTitle = "Full Stack Development"
         sliceChildren = (
           <div>
@@ -78,7 +80,7 @@ export default class App extends Component {
         )
         break;
       case 2:
-        sliceImg = require('../img/mardel.jpg');
+        sliceImg = imgMardel;
         sliceTitle = 'About Me';
         sliceChildren = (
           <div>
@@ -99,7 +101,7 @@ export default class App extends Component {
         )
         break;
       case 3:
-        sliceImg = require('../img/desktop.jpg');
+        sliceImg = imgDesktop;
         sliceTitle = 'Contact';
         const linkedIn = require('../img/linkedin.svg')
         const gmail = require('../img/gmail.svg')
