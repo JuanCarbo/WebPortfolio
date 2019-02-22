@@ -28,12 +28,12 @@ export default class App extends Component {
 
     switch (this.state.CurrentSlice) {
       case 0:
-        sliceImg = require('../img/desktop.jpg');
-        sliceTitle = "Yaeh, Programming";
+        sliceImg = require('../img/laptop.jpg');
+        sliceTitle = "I am Juan Carbo";
         sliceChildren = (
           <div>
-            <p>Incididunt ad consectetur sit sint veniam aute commodo veniam tempor aute commodo velit.</p>
-            <div className="cta" onClick={()=> window.open("https://www.linkedin.com/in/juan-carb%C3%B3-62695399/", "_blank")}>HIRE ME!</div>
+            <p>I am a full stack developer, currently living in mar del plata and looking forward to working with you.</p>
+            <div className="cta" onClick={() => window.open("https://www.linkedin.com/in/juan-carb%C3%B3-62695399/", "_blank")}>HIRE ME!</div>
           </div>
         )
         break;
@@ -72,30 +72,57 @@ export default class App extends Component {
         break;
       case 2:
         sliceImg = require('../img/mardel.jpg');
-        sliceTitle = 'I am Juan Carbó';
+        sliceTitle = 'About Me';
         sliceChildren = (
           <div>
-            <div>
+            <div style={{ width: '50%' }}>
               <p>
                 I am a full stack developer, currently working at Globant in a asp.net project. My hability to come up with approaches to difficult issues has made me shine through the time I have been working here.
             </p>
+              <br />
               <p>
                 In the past, I have worked as an Android Developer for <a href='https://www.redjar.com.ar/'>RedJar</a> , and as a freelance developer for local customers.
+            </p>
+              <br />
+              <p>
+                My passion in life has always been fixing things. It strarted with whatever needed fixing or improving in my house and in time that passion took me towards programming. The options that programming gives to problemsolving are endless if combined with other technologies and are then best way to reaching your needs.
             </p>
             </div>
           </div>
         )
-    }
-    let nulldiv
-    if (this.state.MenuIsExpanded) {
-      nulldiv = <div className="transparent-Filter" onClick={(e) => this.handleToggleMenu(e)}></div>
+        break;
+      case 3:
+        sliceImg = require('../img/desktop.jpg');
+        sliceTitle = 'Contact';
+        const linkedIn = require('../img/linkedin.svg')
+        const gmail = require('../img/gmail.svg')
+        sliceChildren = (
+          <div>
+            <br />
+            <div className='transparent-box'>
+
+              <a href='mailto:juan.carbo94@gmail.com'>
+                <img src={gmail} alt="Gmail" style={{ display: "block", height: '50px', width: '50px' }} />
+                <h3>Juan.Carbo94@gmail.com</h3>
+              </a>
+              <a href='www.linkedin.com/in/juan-carbo'>
+                <img src={linkedIn} alt="LinkedIn" style={{ display: "block", height: '50px', width: '50px' }}></img>
+
+                <h3>www.linkedin.com/in/juan-carbo</h3>
+              </a>
+            </div>
+
+          </div>
+        )
+        break;
+      default: ;
     }
 
 
     return (
       <div className="App">
 
-        <div className={`transparent-filter ${this.state.MenuIsExpanded ? 'active' : ''}`} onClick= {() => this.clickAnywhere()}>
+        <div className={`transparent-filter ${this.state.MenuIsExpanded ? 'active' : ''}`} onClick={() => this.clickAnywhere()}>
 
         </div>
         <aside>
@@ -106,10 +133,10 @@ export default class App extends Component {
           <img src={menuImg} onClick={(e) => this.handleToggleMenu(e)} alt='Menu' />
           <nav>
             <ul className={`${this.state.MenuIsExpanded ? 'active' : 'inactive'}`}>
-              <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 0 })}>Home</a></li>
-              <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 1 })}>Portfolio</a></li>
-              <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 2 })}>About Me</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 0 })}>Home</div></li>
+              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 1 })}>Portfolio</div></li>
+              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 2 })}>About Me</div></li>
+              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 3 })}>Contact</div></li>
             </ul>
           </nav>
         </aside>

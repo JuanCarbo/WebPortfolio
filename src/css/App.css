@@ -51,9 +51,14 @@ nav {
   background: #fff;
 }
 
+.Contact-Links{
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+  color: white;
+}
 
-
-ul li a {
+ul li div {
   text-decoration: none;
   text-transform: uppercase;
   font-size: .8em;
@@ -90,6 +95,10 @@ p {
   margin: 2em 0;
 }
 .transparent-box svg{
+  margin: 1em;
+  height: 5em;
+}
+.transparent-box img{
   margin: 1em;
   height: 5em;
 }
