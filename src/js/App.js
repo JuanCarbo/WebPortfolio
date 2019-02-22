@@ -70,7 +70,7 @@ export default class App extends Component {
         sliceTitle = 'I am Juan Carbó';
         sliceChildren = (
           <div>
-            <div>
+            <div className>
               <p>
                 I am a full stack developer, currently working at Globant in a asp.net project. My hability to come up with approaches to difficult issues has made me shine through the time I have been working here.
             </p>
@@ -80,6 +80,11 @@ export default class App extends Component {
             </div>
           </div>
         )
+    }
+    let nulldiv
+    if(this.state.MenuIsExpanded)
+    {
+      nulldiv = <div className="transparent-Filter" onClick={(e)=>this.handleToggleMenu(e)}></div>
     }
 
 
@@ -92,14 +97,13 @@ export default class App extends Component {
           </figure>
           <img src={menuImg} onClick={(e) => this.handleToggleMenu(e)} alt='Menu' />
           <nav>
-            <ul className={`${this.state.MenuIsExpanded ? 'active' : ''}`}>
+            <ul className={`${this.state.MenuIsExpanded ? 'active' : 'inactive'}`}>
               <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 0 })}>Home</a></li>
               <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 1 })}>Portfolio</a></li>
               <li><a href="#" onClick={(e) => this.setState({ CurrentSlice: 2 })}>About Me</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
           </nav>
-
         </aside>
         <Slice title={sliceTitle} CustomImg={sliceImg}>
           {sliceChildren}
