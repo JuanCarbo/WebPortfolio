@@ -18,6 +18,13 @@ export default class App extends Component {
     })
   }
 
+  handleChangeSlice(slice){
+    this.setState({
+      CurrentSlice: slice,
+      MenuIsExpanded: false, 
+    })
+  }
+
   clickAnywhere() {
     if (this.state.MenuIsExpanded)
       this.handleToggleMenu(null);
@@ -75,7 +82,7 @@ export default class App extends Component {
         sliceTitle = 'About Me';
         sliceChildren = (
           <div>
-            <div style={{ width: '50%' }}>
+            <div className="about-Me-Container">
               <p>
                 I am a full stack developer, currently working at Globant in a asp.net project. My hability to come up with approaches to difficult issues has made me shine through the time I have been working here.
             </p>
@@ -85,7 +92,7 @@ export default class App extends Component {
             </p>
               <br />
               <p>
-                My passion in life has always been fixing things. It strarted with whatever needed fixing or improving in my house and in time that passion took me towards programming. The options that programming gives to problemsolving are endless if combined with other technologies and are then best way to reaching your needs.
+                My passion in life has always been fixing things. It strarted with whatever needed fixing or improving in my house, and in time that passion took me towards programming. The options that programming gives to problemsolving are endless if combined with other technologies and are then best way to reaching your needs.
             </p>
             </div>
           </div>
@@ -133,10 +140,10 @@ export default class App extends Component {
           <img src={menuImg} onClick={(e) => this.handleToggleMenu(e)} alt='Menu' />
           <nav>
             <ul className={`${this.state.MenuIsExpanded ? 'active' : 'inactive'}`}>
-              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 0 })}>Home</div></li>
-              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 1 })}>Portfolio</div></li>
-              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 2 })}>About Me</div></li>
-              <li><div href="#" onClick={(e) => this.setState({ CurrentSlice: 3 })}>Contact</div></li>
+              <li><div href="#" onClick={(e) => this.handleChangeSlice(0)}>Home</div></li>
+              <li><div href="#" onClick={(e) => this.handleChangeSlice(1)}>Portfolio</div></li>
+              <li><div href="#" onClick={(e) => this.handleChangeSlice(2)}>About Me</div></li>
+              <li><div href="#" onClick={(e) => this.handleChangeSlice(3)}>Contact</div></li>
             </ul>
           </nav>
         </aside>
