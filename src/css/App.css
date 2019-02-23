@@ -1,4 +1,6 @@
-body, html, .App {
+body,
+html,
+.App {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -32,7 +34,7 @@ body, html, .App {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(45deg, rgba(230, 30, 25, 1) 0%, rgba(245, 181, 83, 1) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e61e19', endColorstr='#f5b553', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e61e19', endColorstr='#f5b553', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
 
@@ -139,22 +141,26 @@ ul {
     opacity: 0.7;
     transition: opacity .5s ease-out;
   }
+
   .transparent-filter {
     display: block;
     opacity: 0;
     height: 100%;
     position: fixed;
   }
+
   main {
     background: #fff !important;
     padding: 1em 1.4em;
   }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     transition: transform 0.5s ease-out
   }
+
   ul.inactive {
     position: fixed;
     display: block;
@@ -164,6 +170,7 @@ ul {
     top: 0;
     height: 0;
   }
+
   ul.active {
     position: absolute;
     display: block;
@@ -179,10 +186,13 @@ ul {
   .about-Me-Container {
     width: 50%;
   }
+
   .transparent-filter {
     display: none;
   }
-  body, .App {
+
+  body,
+  .App {
     position: fixed;
     display: grid;
     grid-template-columns: 20% auto;
@@ -190,9 +200,11 @@ ul {
     height: calc(100% - 4em);
     width: calc(100% - 4em);
   }
+
   img {
     display: none;
   }
+
   aside {
     display: table;
     height: 100%;
@@ -202,6 +214,7 @@ ul {
     grid-template-rows: 20% auto;
     padding: 0;
   }
+
   main {
     color: #fff;
     padding: 4em;
@@ -210,6 +223,7 @@ ul {
     background-position-x: 0;
     background-position-y: 0;
   }
+
   #avatar {
     border-radius: 50%;
     background: #fff;
@@ -219,10 +233,12 @@ ul {
     background-image: url('../img/corvo.jpg');
     background-size: 100%;
   }
+
   figcaption {
     text-align: center;
     color: #000;
   }
+
   ul {
     display: block;
     margin-top: 2em;
@@ -230,12 +246,15 @@ ul {
     background: none !important;
     width: 100% !important;
   }
+
   ul li a:hover {
     background-color: #fff;
   }
+
   nav {
     background: none;
   }
+
   .cta {
     cursor: pointer;
     display: inline-block;
@@ -243,13 +262,16 @@ ul {
     padding: .8em 3em;
     margin-right: 1em;
   }
+
   h1 {
     font-size: 3em;
     margin-top: 1em;
   }
+
   p {
     font-size: 1.5em;
   }
+
   .transparent-box {
     padding: 1em;
     background-color: #B16D03AA;

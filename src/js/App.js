@@ -167,7 +167,9 @@ export default class App extends Component {
         <Slice title={sliceTitle} CustomImg={sliceImg}>
           {sliceChildren}
         </Slice>
-        <div className={`contact-Form ${this.state.contactFormExpanded? "active" : ''}`} onClick={()=>this.setState({contactFormExpanded: false})} ></div>
+        <div className={`contact-Form ${this.state.contactFormExpanded? "active" : ''}`} onClick={()=>this.setState({contactFormExpanded: false})} >
+        
+        </div>
       </div>
     );
   }
