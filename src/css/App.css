@@ -1,6 +1,22 @@
 body, html, .App {
   font-family: 'Open Sans', sans-serif;
 }
+
+.contact-Form {
+  display: none;
+}
+
+.contact-Form.active {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #3E2500;
+  opacity: 0.7;
+}
+
 .App {
   position: absolute;
   height: calc(100%);
@@ -20,7 +36,7 @@ body, html, .App {
   /* IE6-9 fallback on horizontal gradient */
 }
 
-a{
+a {
   color: inherit;
   cursor: pointer;
   text-decoration: underline;
@@ -51,7 +67,7 @@ nav {
   background: #fff;
 }
 
-.Contact-Links{
+.Contact-Links {
   font-weight: bold;
   font-size: 2em;
   text-decoration: none;
@@ -94,11 +110,13 @@ p {
   border-radius: 4px;
   margin: 2em 0;
 }
-.transparent-box svg{
+
+.transparent-box svg {
   margin: 1em;
   height: 5em;
 }
-.transparent-box img{
+
+.transparent-box img {
   margin: 1em;
   height: 5em;
 }
@@ -110,9 +128,8 @@ ul {
   transition: transform 0.5s ease-out
 }
 
-
-@media only screen and (max-width: 768px){
-  .transparent-filter.active{
+@media only screen and (max-width: 768px) {
+  .transparent-filter.active {
     display: block;
     position: fixed;
     left: 0;
@@ -122,7 +139,7 @@ ul {
     opacity: 0.7;
     transition: opacity .5s ease-out;
   }
-  .transparent-filter{
+  .transparent-filter {
     display: block;
     opacity: 0;
     height: 100%;
@@ -138,7 +155,7 @@ ul {
     padding: 0;
     transition: transform 0.5s ease-out
   }
-  ul.inactive{
+  ul.inactive {
     position: fixed;
     display: block;
     background: #fff;
@@ -159,10 +176,10 @@ ul {
 }
 
 @media only screen and (min-width: 768px) {
-  .about-Me-Container{
+  .about-Me-Container {
     width: 50%;
   }
-  .transparent-filter{
+  .transparent-filter {
     display: none;
   }
   body, .App {
@@ -177,7 +194,6 @@ ul {
     display: none;
   }
   aside {
-    
     display: table;
     height: 100%;
     overflow: hidden;
@@ -214,7 +230,6 @@ ul {
     background: none !important;
     width: 100% !important;
   }
-  
   ul li a:hover {
     background-color: #fff;
   }
@@ -226,6 +241,7 @@ ul {
     display: inline-block;
     font-size: 1.3em;
     padding: .8em 3em;
+    margin-right: 1em;
   }
   h1 {
     font-size: 3em;
@@ -234,7 +250,7 @@ ul {
   p {
     font-size: 1.5em;
   }
-  .transparent-box{
+  .transparent-box {
     padding: 1em;
     background-color: #B16D03AA;
   }
